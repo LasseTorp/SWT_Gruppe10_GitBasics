@@ -29,6 +29,7 @@ namespace L01___Calculator__Unit_test_
 
         public double Divide(double a, double b)
         {
+            Accumulator = (a / b);
             return a / b;
         }
 
