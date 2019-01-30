@@ -39,5 +39,14 @@ namespace Cal.Test.Unit
         {
             Assert.That(calculator.Power(10, 2), Is.EqualTo(100));
         }
+
+        [Test]
+        public void accumulation_2plus2_4()
+        {
+            calculator.Add(3, 4);
+            calculator.Add(2, 2);
+
+            Assert.That(calculator.Accumulator, Is.EqualTo(4));
+        }
     }
 }
