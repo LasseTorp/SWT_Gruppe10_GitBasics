@@ -23,6 +23,11 @@ namespace L01___Calculator__Unit_test_
             return a * b;
         }
 
+        public double Divide(double a, double b)
+        {
+            return a / b;
+        }
+
         public double Power(double x, double exp)
         {
             return Math.Pow(x, exp);

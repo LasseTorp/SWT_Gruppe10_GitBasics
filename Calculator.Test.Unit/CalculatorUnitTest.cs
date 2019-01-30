@@ -30,6 +30,11 @@ namespace Cal.Test.Unit
             Assert.That(calculator.Subtract(10, 10), Is.EqualTo(0));
         }
         [Test]
+        public void Divide_ReturnsRightAmount()
+        {
+            Assert.That(calculator.Divide(10, 2), Is.EqualTo(5));
+        }
+        [Test]
         public void Multiply_ReturnsRightAmount()
         {
             Assert.That(calculator.Multiply(10, 10), Is.EqualTo(100));
