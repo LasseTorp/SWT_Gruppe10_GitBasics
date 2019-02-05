@@ -72,5 +72,14 @@ namespace Cal.Test.Unit
 
             Assert.That(calculator.Accumulator, Is.EqualTo(4));
         }
+
+        [Test]
+        public void accumulation_2dividedBy2_1()
+        {
+            calculator.Divide(4, 2);
+            calculator.Divide(2, 2);
+
+            Assert.That(calculator.Accumulator, Is.EqualTo(1));
+        }
     }
 }
