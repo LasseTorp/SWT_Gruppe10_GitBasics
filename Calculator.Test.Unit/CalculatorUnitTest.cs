@@ -65,7 +65,7 @@ namespace Cal.Test.Unit
         }
 
         [Test]
-        public void accumulation_2plus2_4(double a, double b, double c)
+        public void accumulation_2plus2_4()
         {
             calculator.Add(3, 4);
             calculator.Add(2, 2);
