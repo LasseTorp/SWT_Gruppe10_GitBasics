@@ -19,34 +19,53 @@ namespace Cal.Test.Unit
             calculator = new Calculator();
         }
 
+        [TestCase(10,10,20)]
+        [TestCase(20,20,40)]
+        [TestCase(14,14,28)]
         [Test]
-        public void Add_ReturnsRightAmount()
+        public void Add_ReturnsRightAmount(double a, double b, double c)
         {
-            Assert.That(calculator.Add(10,10), Is.EqualTo(20));
+            Assert.That(calculator.Add(a,b), Is.EqualTo(c));
         }
+
+        [TestCase(10, 10, 0)]
+        [TestCase(20, 18, 2)]
+        [TestCase(8, 10, -2)]
         [Test]
-        public void Subtract_ReturnsRightAmount()
+        public void Subtract_ReturnsRightAmount(double a, double b, double c)
         {
-            Assert.That(calculator.Subtract(10, 10), Is.EqualTo(0));
+            Assert.That(calculator.Subtract(a, b), Is.EqualTo(c));
         }
+
+        [TestCase(10, 2, 5)]
+        [TestCase(20, 10, 2)]
+        [TestCase(8, 3, 2.66)]
         [Test]
-        public void Divide_ReturnsRightAmount()
+        public void Divide_ReturnsRightAmount(double a, double b, double c)
         {
-            Assert.That(calculator.Divide(10, 2), Is.EqualTo(5));
+            Assert.That(calculator.Divide(a, b), Is.EqualTo(c).Within(0.01));
         }
+
+        [TestCase(10, 2, 20)]
+        [TestCase(20, 3, 60)]
+        [TestCase(8, 3, 24)]
         [Test]
-        public void Multiply_ReturnsRightAmount()
+        public void Multiply_ReturnsRightAmount(double a, double b, double c)
         {
-            Assert.That(calculator.Multiply(10, 10), Is.EqualTo(100));
+            Assert.That(calculator.Multiply(a, b), Is.EqualTo(c));
         }
+
+        [TestCase(10, 2, 100)]
+        [TestCase(2, 3, 8)]
+        [TestCase(8, 4, 4096)]
         [Test]
-        public void Power_ReturnsRightAmount()
+        public void Power_ReturnsRightAmount(double a, double b, double c)
         {
-            Assert.That(calculator.Power(10, 2), Is.EqualTo(100));
+            Assert.That(calculator.Power(a, b), Is.EqualTo(c));
         }
 
         [Test]
-        public void accumulation_2plus2_4()
+        public void accumulation_2plus2_4(double a, double b, double c)
         {
             calculator.Add(3, 4);
             calculator.Add(2, 2);
