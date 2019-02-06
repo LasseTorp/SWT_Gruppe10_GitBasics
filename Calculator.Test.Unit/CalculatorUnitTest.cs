@@ -46,6 +46,7 @@ namespace Cal.Test.Unit
         [TestCase(8, 3, 2.66)]
         [TestCase(3.2,1.8,1.77)]
         [TestCase(8.7,2.5,3.48)]
+        [TestCase(0,20,0)]
         [Test]
         public void Divide_ReturnsRightAmount(double a, double b, double c)
         {
