@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -29,9 +32,17 @@ namespace L01___Calculator__Unit_test_
 
         public double Divide(double a, double b)
         {
-            Accumulator = (a / b);
-            return a / b;
+            if (b != 0)
+            {
+                Accumulator = (a / b);
+                return a / b;
+            }
+            else
+            {
+                throw new DivideByZeroException();
+            }
         }
+
 
         public double Power(double x, double exp)
         {
