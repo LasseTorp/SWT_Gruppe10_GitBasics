@@ -17,6 +17,8 @@ namespace L01___Calculator__Unit_test_
             Console.WriteLine("Divide({0} / {1}) = {2}", 10.00, 2.00, calculator.Subtract(10, 2));
             Console.WriteLine("Multiply({0} * {1}) = {2}", 10.00, 10.00, calculator.Multiply(10,10));
             Console.WriteLine("Power({0} ^ {1}) = {2}", 10.00, 1.00, calculator.Power(10,1));
+
+            Console.ReadKey();
         }
     }
 }
