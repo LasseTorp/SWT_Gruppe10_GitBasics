@@ -19,6 +19,8 @@ namespace L01___Calculator__Unit_test_
             Console.WriteLine("Power({0} ^ {1}) = {2}", 10.00, 1.00, calculator.Power(10,1));
 
             Console.ReadKey();
+
+            //Hej jeppe
         }
     }
 }
